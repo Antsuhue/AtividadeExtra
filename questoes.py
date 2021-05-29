@@ -159,3 +159,110 @@ def Ex9(saldoMedio):
     else:
         reajuste = (saldoMedio * 0.10) + saldoMedio
         return reajuste
+
+def Ex10(custoVeiculo):
+    #custoVeiculo = float(input("Informe o custo de fábrica -> "))
+    distribuidor = 0
+    imposto = 0
+
+    if custoVeiculo < 12000:
+        distribuidor = 0.05 * custoVeiculo
+        return custoVeiculo + distribuidor
+    elif custoVeiculo >= 12000 and custoVeiculo <= 250000:
+        distribuidor = 0.10 * custoVeiculo
+        imposto = 0.15 * custoVeiculo
+        return custoVeiculo + (distribuidor + imposto)
+    else:
+        distribuidor = 0.15 * custoVeiculo
+        imposto = 0.20 * custoVeiculo
+        return custoVeiculo + (distribuidor + imposto)
+
+def Ex11(sal):
+    #sal = float(input("informe o valor do salário -> "))
+    
+    percentual = 0
+
+    if sal <= 300:
+        percentual = 0.15
+        return sal + (sal*percentual)
+    elif sal > 300 and sal <= 600:
+        percentual = 0.10
+        return sal + (sal*percentual)
+    elif sal > 600 and sal <= 900:
+        percentual = 0.05
+        return sal + (sal*percentual)
+    else:
+        return sal
+
+def Ex12(sal):
+    #sal = float(input("informe o valor do salário -> "))
+    
+    imposto = 0.07
+
+    if sal <= 350:
+        return 100 + (sal - (sal*imposto))
+    elif sal > 350 and sal <= 600:
+        return 75 + (sal - (sal*imposto))
+    elif sal > 600 and sal <= 900:
+        return 50 + (sal - (sal*imposto))
+    else:
+        return 35 + (sal - (sal*imposto))
+
+def Ex13(precoProduto):
+    #precoProduto = float(input("informe o valor do produto -> "))
+    novoPreco = 0
+    if precoProduto <= 50:
+        novoPreco = precoProduto + (precoProduto * 0.05)
+    elif precoProduto > 50 and precoProduto <= 100:
+        novoPreco = precoProduto + (precoProduto * 0.10)
+    else:
+        novoPreco = precoProduto + (precoProduto * 0.15)
+
+    if novoPreco <= 80:
+        return f"{novoPreco} Barato"
+    elif novoPreco > 80 and novoPreco <= 120:
+        return f"{novoPreco} Normal"
+    elif novoPreco > 120 and novoPreco <= 200:
+        return f"{novoPreco} Caro"
+    else:
+        return f"{novoPreco} Muito Caro"
+
+def Ex14(sal):
+    #sal = float(input("informe o valor do salário -> "))
+    
+    percentual = 0
+
+    if sal <= 300:
+        percentual = 0.50
+        return sal + (sal*percentual)
+    elif sal > 300 and sal <= 500:
+        percentual = 0.40
+        return sal + (sal*percentual)
+    elif sal > 500 and sal <= 700:
+        percentual = 0.30
+        return sal + (sal*percentual)
+    elif sal > 700 and sal <= 800:
+        percentual = 0.20
+        return sal + (sal*percentual)
+    elif sal > 800 and sal <= 1000:
+        percentual = 0.10
+        return sal + (sal*percentual)
+    else:
+        percentual = 0.05
+        return sal + (sal*percentual)
+
+def Ex15(valor, op):
+    #valor = float(input("informe o valor a ser investido -> "))
+    #print("Escolha o tipo de fundo de investimento")
+    #print("Sendo 1 para Poupança e 2 para Fundos de renda fixa")
+    #op = float(input("-> "))
+    rendimento = 0
+
+    if op == 1:
+        rendimento = 0.03
+    elif op == 2:
+        rendimento = 0.04
+    else:
+        return "Opção inválida!"
+    
+    return f"Renderá ao mês {valor*rendimento}"

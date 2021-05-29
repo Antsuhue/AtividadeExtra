@@ -50,3 +50,38 @@ def test_ex9():
     assert questoes.Ex9(250) == 300
     assert questoes.Ex9(400) == 500
     assert questoes.Ex9(1000) == 1300
+
+def test_ex10():
+    assert questoes.Ex10(10000) == 10500
+    assert questoes.Ex10(15000) == 18750
+    assert questoes.Ex10(26000) == 32500
+
+def test_ex11():
+    assert questoes.Ex11(200) == 230
+    assert questoes.Ex11(500) == 550
+    assert questoes.Ex11(700) == 735
+    assert questoes.Ex11(1000) == 1000
+
+def test_ex12():
+    assert questoes.Ex12(200) == 286
+    assert questoes.Ex12(500) == 540
+    assert questoes.Ex12(700) == 701
+    assert questoes.Ex12(1000) == 965
+
+def test_ex13():
+    assert questoes.Ex13(40) == "42.0 Barato"
+    assert questoes.Ex13(90) == "99.0 Normal"
+    assert questoes.Ex13(150) == "172.5 Caro"
+    assert questoes.Ex13(210) == "241.5 Muito Caro"
+
+def test_ex14():
+    assert questoes.Ex14(100) == 150
+    assert questoes.Ex14(400) == 560
+    assert questoes.Ex14(600) == 780
+    assert questoes.Ex14(900) == 990
+    assert questoes.Ex14(1100) == 1155
+    
+def test_ex15():
+    assert questoes.Ex15(100,1) == "Renderá ao mês 3.0"
+    assert questoes.Ex15(100,2) == "Renderá ao mês 4.0"
+    assert questoes.Ex15(100,3) == "Opção inválida!"
