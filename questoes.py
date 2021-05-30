@@ -266,3 +266,97 @@ def Ex15(valor, op):
         return "Opção inválida!"
     
     return f"Renderá ao mês {valor*rendimento}"
+
+def Ex16(precoProduto):
+    #precoProduto = float(input("informe o valor do produto -> "))
+
+    desconto = 0
+    
+    if precoProduto > 30 and precoProduto <= 100:
+        desconto = 0.10
+    elif precoProduto > 100:
+        desconto = 0.15
+    
+    return precoProduto - (precoProduto * desconto)
+
+def Ex17(senha):
+    #senha = input("Informe a senha para o acesso -> ")
+
+    if senha == "4531":
+        return "Acesso permitido!"
+    else:
+        return "Acesso negado!"
+    
+def Ex18(idade):
+    #idade = int(input("Informe a idade -> "))
+    
+    if idade >= 18:
+        return "Maior de idade!"
+    else:
+        return "Menor de idade!"
+
+def Ex19(altura, sexo):
+    #altura = float(input("Informe a sua altura -> "))
+    #sexo = input("Informe a idade (M/F) -> ")
+    peso_ideal = 0
+
+    if sexo.upper() == "M":
+        peso_ideal = (72.7 * altura) - 58
+    elif sexo.upper() == "F":
+        peso_ideal = (62.1 * altura) - 44.7    
+    else:
+        return "Sexo inválido!"
+
+    return f"Seu peso ideal é {peso_ideal:.2f}Kg"
+
+def Ex20(idade):
+    #idade = int(input("Informe a idade -> "))
+    categoria = ""
+    if idade >= 5 and idade <= 7:
+        categoria = "Infantil"
+
+    elif idade >= 8 and idade <= 10:
+        categoria = "Juvenil"
+
+    elif idade >= 11 and idade <= 15:
+        categoria = "Adolescente"
+
+    elif idade >= 16 and idade <= 30:
+        categoria = "Adulto"
+    
+    elif idade > 30:
+        categoria = "Sênior"
+
+    else:
+        return "Não possui categoria!"
+
+    return f"Sua categoria é {categoria}"
+
+def Ex21(codOrigem):
+
+    categorias = {
+        "procedencia": {
+            "Sul": [1],
+            "Norte": [2],
+            "Leste": [3],
+            "Oeste": [4],
+            "Nordeste": [5, 6],
+            "Sudeste": [7, 8, 9],
+            "Centro-Oeste": []
+        }
+    }
+    for i in range(10,20):
+        categorias["procedencia"]["Centro-Oeste"].append(i)
+
+    for t in range(21,30):
+        categorias["procedencia"]["Nordeste"].append(t)
+
+    for x in categorias["procedencia"]:
+        for y in categorias["procedencia"][x]:
+            if codOrigem == y:
+                return f"{x}"
+
+def Ex22():
+    
+
+    

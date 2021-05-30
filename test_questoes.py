@@ -85,3 +85,44 @@ def test_ex15():
     assert questoes.Ex15(100,1) == "Renderá ao mês 3.0"
     assert questoes.Ex15(100,2) == "Renderá ao mês 4.0"
     assert questoes.Ex15(100,3) == "Opção inválida!"
+
+def test_ex16():
+    assert questoes.Ex16(10) == 10
+    assert questoes.Ex16(50) == 45
+    assert questoes.Ex16(110) == 93.5
+
+def test_ex17():
+    assert questoes.Ex17("4531") == "Acesso permitido!"
+    assert questoes.Ex17("41") == "Acesso negado!"
+
+def test_ex18():
+    assert questoes.Ex18(55) == "Maior de idade!"
+    assert questoes.Ex18(10) == "Menor de idade!"
+
+def test_ex19():
+    assert questoes.Ex19(1.78, "m") == "Seu peso ideal é 71.41Kg"
+    assert questoes.Ex19(1.60, "f") == "Seu peso ideal é 54.66Kg"
+    assert questoes.Ex19(1.60, "M") == "Seu peso ideal é 58.32Kg"
+    assert questoes.Ex19(1.60, "F") == "Seu peso ideal é 54.66Kg"
+    assert questoes.Ex19(1.60, "x") == "Sexo inválido!"
+
+def test_ex20():
+    assert questoes.Ex20(5) == "Sua categoria é Infantil"
+    assert questoes.Ex20(8) == "Sua categoria é Juvenil"
+    assert questoes.Ex20(12) == "Sua categoria é Adolescente"
+    assert questoes.Ex20(17) == "Sua categoria é Adulto"
+    assert questoes.Ex20(35) == "Sua categoria é Sênior"
+    assert questoes.Ex20(2) == "Não possui categoria!"
+
+def test_ex21():
+    assert questoes.Ex21(1) == "Sul"
+    assert questoes.Ex21(2) == "Norte"
+    assert questoes.Ex21(4) == "Oeste"
+    assert questoes.Ex21(3) == "Leste"
+    assert questoes.Ex21(5) == "Nordeste"
+    assert questoes.Ex21(8) == "Sudeste"
+    assert questoes.Ex21(18) == "Centro-Oeste"
+
+def test_ex22():
+    pass
+    
